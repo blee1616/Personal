@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang = "en">
 <head>
     <meta charset = "UTF-8">
@@ -76,4 +76,85 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-</script>
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutMe.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="images/BLSE_Resume.pdf" download>Resume</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="https://github.com/blee1616">
+                            <img src="images/githubLogo.png" width="60" height="60">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/brendan-lee-564a9823a">
+                            <img src="images/linkedinLogo.png" width="60" height="60">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1 class="sub-title">About Me</h1>
+                <p style="margin: 15px auto 30px auto; width: 35%; font-size: 18px">My name is Brendan Lee, and I am a first-year Computer Science student at
+                    Caltech with interests in software engineering and machine learning/aritificial intelligence.
+                    I have a strong foundation in mathematics, data science, and programming.
+                    Whether in research, industry, or casual pursuits, I am always drawn to challenges that require a balance of logic, intuition, and adaptability.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('hobbies')">Hobbies</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('contact')">Contact</p>
+                </div>
+                <div class="tab-contents active-tab" id="hobbies">
+                    <ul>
+                        <li><span>Poker</span><br>Always open to playing in cash games or tournaments</li>
+                        <li><span>TV Shows</span><br>Favorite shows: Game of Thrones, Silicon Valley, Breaking Bad <br> Currently Watching: Better Call Saul and Severance</li>
+                        <li><span>Soccer</span><br>Favorite Team: LA FC<br> Currently playing on NCAA Soccer team</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>Software Engineering</span><br>Python; Java; C++</li>
+                        <li><span>Data Science</span><br>Python in Machine Learning; MATLAB; Statistics</li>
+                        <li><span>Problem-Solving</span><br>Puzzles; Brainteasers; Creative Thinking</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="contact">
+                    <ul>
+                        <li><span>Email</span><br>bdlee 'at' caltech 'dot' edu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
