@@ -36,22 +36,35 @@
     </div>
 </div>
 <script>
-    const nameText = "Brendan Lee";
-    const subText = "Welcome to my personal domain. I hope you can learn more about me and find it interesting.";
+    const firstNameText = "Brendan";
+    const lastNameText = "Lee";
+    const subText = "Welcome to my personal website. Here is where you can learn more about me and my interests. I hope you find it interesting!";
     const typedNameDiv = document.getElementById("typed-name");
     const typedSubDiv = document.getElementById("typed-subtext");
-    let idx = 0;
+    let firstIdx = 0;
+    let lastIdx = 0;
     let subIdx = 0;
 
-    function typeWriter() {
-        if (idx <= nameText.length) {
-            typedNameDiv.textContent = nameText.slice(0, idx);
-            idx++;
-            setTimeout(typeWriter, 120);
+    function typeFirstName() {
+        if (firstIdx <= firstNameText.length) {
+            typedNameDiv.innerHTML = firstNameText.slice(0, firstIdx) + "<br>";
+            firstIdx++;
+            setTimeout(typeFirstName, 120);
+        } else {
+            setTimeout(typeLastName, 200); // slight pause before last name
+        }
+    }
+    
+    function typeLastName() {
+        if (lastIdx <= lastNameText.length) {
+            typedNameDiv.innerHTML = firstNameText + "<br>" + lastNameText.slice(0, lastIdx);
+            lastIdx++;
+            setTimeout(typeLastName, 120);
         } else {
             setTimeout(typeSubWriter, 400); // slight pause before subtext
         }
     }
+    
     function typeSubWriter() {
         if (subIdx <= subText.length) {
             typedSubDiv.textContent = subText.slice(0, subIdx);
@@ -59,7 +72,8 @@
             setTimeout(typeSubWriter, 40);
         }
     }
-    typeWriter();
+    
+    typeFirstName();
 
     window.addEventListener('scroll', function() {
         if (window.scrollY > 10) {
