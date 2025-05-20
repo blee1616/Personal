@@ -55,6 +55,20 @@ body{
     transition: opacity 0.3s;
 }
 
+.social-icon {
+    background-color: white;
+    padding: 4px;
+    border-radius: 40%;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
 #typed-name.hide,
 #typed-subtext.hide {
     opacity: 0;
