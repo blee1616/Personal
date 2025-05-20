@@ -38,7 +38,7 @@
 <script>
     const firstNameText = "Brendan";
     const lastNameText = "Lee";
-    const subText = "Welcome to my digital portfolio. Explore my projects, experience, and journey in software engineering, AI, and quantitative finance.";
+    const subText = "Welcome to my digital portfolio. Explore my projects, experience, and journey in software engineering and AI/ML innovation.";
     const typedNameDiv = document.getElementById("typed-name");
     const typedSubDiv = document.getElementById("typed-subtext");
     let firstIdx = 0;
@@ -51,7 +51,7 @@
             firstIdx++;
             setTimeout(typeFirstName, 120);
         } else {
-            setTimeout(typeLastName, 200); // slight pause before last name
+            setTimeout(typeLastName, 200);
         }
     }
     
@@ -61,7 +61,7 @@
             lastIdx++;
             setTimeout(typeLastName, 120);
         } else {
-            setTimeout(typeSubWriter, 400); // slight pause before subtext
+            setTimeout(typeSubWriter, 400);
         }
     }
     
