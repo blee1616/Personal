@@ -21,7 +21,6 @@ body {
     padding: 10px 10%;
 }
 
-/* Navigation styles */
 nav {
     display: flex;
     align-items: center;
@@ -57,7 +56,6 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Experience section */
 .experience-section {
     padding: 30px 10%;
     min-height: 80vh;
@@ -71,7 +69,6 @@ nav ul li a:hover::after {
     margin-bottom: 40px;
 }
 
-/* Timeline layout */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -89,7 +86,6 @@ nav ul li a:hover::after {
     margin-left: -1px;
 }
 
-/* Timeline items */
 .timeline-item {
     padding: 10px 50px;
     position: relative;
@@ -118,7 +114,6 @@ nav ul li a:hover::after {
     left: -10px;
 }
 
-/* Timeline content */
 .timeline-content {
     padding: 20px;
     background: rgba(30, 30, 30, 0.7);
@@ -156,7 +151,6 @@ nav ul li a:hover::after {
     margin-bottom: 15px;
 }
 
-/* Skills used tags */
 .skills-used {
     display: flex;
     flex-wrap: wrap;
@@ -172,7 +166,6 @@ nav ul li a:hover::after {
     font-weight: 500;
 }
 
-/* Education section */
 .education-section {
     max-width: 800px;
     margin: 0 auto;
@@ -209,6 +202,11 @@ nav ul li a:hover::after {
     color: #ddd;
     margin-bottom: 5px;
 }
+.education-item .minor {
+    font-size: 15px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
 
 .education-item .date {
     color: #ff004f;
@@ -222,7 +220,6 @@ nav ul li a:hover::after {
     line-height: 1.6;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .timeline::after {
         left: 31px;
