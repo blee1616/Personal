@@ -36,15 +36,152 @@
     <div class="projects-section">
         <h1 class="sub-title">My Projects</h1>
         
+        <div class="project-filter">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+            <button class="filter-btn" data-filter="software">Software</button>
+            <button class="filter-btn" data-filter="fintech">Fintech</button>
+        </div>
+
         <div class="projects-container">
-            <!-- Project template - copy this for each new project -->
-            <div class="project-card">
-                <img src="images/project1.jpg" alt="Project 1">
+
+            <div class="project-card" data-category="software machine-learning fintech">
+                <img src="images/TRAI.jpg">
+                <div class="project-info">
+                    <h2>TRAI (Trading AI)</h2>
+                    <p>Started as a webscraper to find relevant articles to a stock. Ran sentimental analysis/. Used this as a backbone for a full-stack trading platform allowing for . Able to backtest  </p>
+                    <div class="project-links">
+                        <a href="https://github.com/blee1616/PythonWebScraper" target="_blank" class="github-link">
+                            <img src="images/githubLogo.png" width="24" height="24"> Webscraper
+                        </a>
+                        <a href="https://github.com/blee1616/TRAI" target="_blank" class="github-link">
+                            <img src="images/githubLogo.png" width="24" height="24"> TRAI
+                        </a>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Full-Stack</span>
+                        <span>Flask</span>
+                        <span>React</span>
+                        <span>TensorFlow</span>
+                        <span>NLP</span>
+                        <span>Financial Data</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="fintech">
+                <img src="images/IMC_Prosperity.png">
+                <div class="project-info">
+                    <h2>IMC Prosperity 3</h2>
+                    <p>Placed 17th/12,000 teams globablly in algorithmic trading competition. Created a trading bot to perform quantitative strategies such as market making, mean reversion, and statistical arbitrage.</p>
+                    <div class="project-links">
+                        <p>Can't be giving away our alpha that easily :).</p>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Statistical Modeling</span>
+                        <span>Data Analysis</span>
+                        <span>Trading Strategies</span>
+                        <span>Backtesting</span>
+                        <span>Game Theory</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="machine-learning">
+                <img src="images/connectfourai.jpg">
+                <div class="project-info">
+                    <h2>Connect Four Bot</h2>
+                    <p>Developed a bot using the minimax search algorithm that can play Connect Four at a competitive level. Currently working on a Connect Four bot using reinforcement learning.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/blee1616/ConnectFourAI" target="_blank" class="github-link">
+                            <img src="images/githubLogo.png" width="24" height="24"> GitHub
+                        </a>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Minimax Algorithm</span>
+                        <span>Game Theory</span>
+                        <span>Numpy</span>
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="machine-learning fintech">
+                <img src="images/BitcoinBot.jpg">
+                <div class="project-info">
+                    <h2>Bitcoin Price Predictor</h2>
+                    <p>Developed a statistical arbitrage trading algorithm that identifies market inefficiencies and executes trades automatically.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/blee1616/BitcoinML" target="_blank" class="github-link">
+                            <img src="images/githubLogo.png" width="24" height="24"> GitHub
+                        </a>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Scikit-learn</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                        <span>XgBoost</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="machine-learning">
+                <img src="images/MachineLearning.jpg">
+                <div class="project-info">
+                    <h2>Machine Learning Projects</h2>
+                    <p>Repository containing various machine learning projects involving deep learning, supervised learning, computer vision, and much more.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/blee1616/ML" target="_blank" class="github-link">
+                            <img src="images/githubLogo.png" width="24" height="24"> GitHub
+                        </a>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Numpy</span>
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>Scikit-learn</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                        <span>Data Analysis</span>
+                        <span>Data Visualization</span>
+                        <span>Statistical Modeling</span>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="project-card" data-category="software">
+                <img src="images/CP.png">
+                <div class="project-info">
+                    <h2>Competitive Coding</h2>
+                    <p>Competitive coding problems from USACO, CodeForces, CSES, and Advent of Code.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/blee1616/CP" target="_blank" class="github-link">
+                            <img src="images/githubLogo.png" width="24" height="24"> GitHub
+                        </a>
+                    </div>
+                    <div class="tech-stack">
+                        <span>C++</span>
+                        <span>Data Structures and Algorithms</span>
+                        <span>Problem-Solving</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="software">
+                <img src="images/PersonalWebsite.png">
                 <div class="project-info">
                     <h2>Personal Website</h2>
                     <p>Built a responsive personal website using HTML, CSS, and JavaScript to showcase my projects, skills, and experience.</p>
                     <div class="project-links">
-                        <a href="https://github.com/blee1616/personal-website" target="_blank" class="github-link">
+                        <a href="https://github.com/blee1616/Personal" target="_blank" class="github-link">
                             <img src="images/githubLogo.png" width="24" height="24"> GitHub
                         </a>
                         <a href="#" class="demo-link">Live Demo</a>
@@ -56,34 +193,35 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Project 2 example -->
-            <div class="project-card">
-                <img src="images/project2.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h2>AI Poker Bot</h2>
-                    <p>Developed a poker bot using reinforcement learning that can play Texas Hold'em at a competitive level.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/blee1616/poker-ai" target="_blank" class="github-link">
-                            <img src="images/githubLogo.png" width="24" height="24"> GitHub
-                        </a>
-                    </div>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>TensorFlow</span>
-                        <span>PyTorch</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Add more projects by copying the template above -->
-            
         </div>
     </div>
 
     <script>
-        // Optional JavaScript for filtering or interactions
-        // This area can be expanded later if needed
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filterValue)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
