@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="experience.css">
 </head>
 <body>
+<div class="scroll-progress"></div>
     <div id="header">
         <div class="container">
             <nav>
@@ -45,7 +46,7 @@
                     <p>Fine-tuning LLM models for business commerce AI agent startup.</p>
                     <div class="skills-used">
                         <span>LLM Fine-Tuning</span>
-                        <span>ML</span>
+                        <span>Machine Learning</span>
                         <span>Backend Development</span>
                     </div>
                 </div>
@@ -128,7 +129,31 @@
             </div>
         </div>
     </div>
+    
     <script>
-        // Optional JavaScript for animations or interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.body.clientHeight;
+                const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+                document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+            });
+        });
     </script>
 </body>
