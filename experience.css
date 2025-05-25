@@ -112,7 +112,7 @@ nav ul li a:hover::after {
 }
 
 .timeline-item {
-    padding: 10px 50px;
+    padding: 10px 20px;
     position: relative;
     width: 50%;
     left: 0;
