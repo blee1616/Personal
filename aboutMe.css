@@ -1,97 +1,34 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppings', sans-serif;
-    box-sizing: border-box;
-}
-/* Replace background in all CSS files (aboutMe.css, projects.css, experience.css) */
-body {
-  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0a0a0a 100%);
-  color: #fff;
-  min-height: 100vh;
-}
-#header{
-    width: 100%;
-    height: 20vh;
-    background-size: cover;
-    background-position: center;
-}
-.container{
-    padding: 10px 10%;
-}
-
-.social-icon {
-    background-color: white;
-    padding: 4px;
-    border-radius: 40%;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    opacity: 1;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-nav{
+/* 1. ABOUT SECTION LAYOUT */
+.about-flex {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+    margin-top: 0px;
 }
 
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-    position: relative;
-}
-nav ul li a::after{
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left:0;
-    bottom:-6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after{
-    width: 100%
-}
-nav ol li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 10px;
+.about-left {
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 600px;
 }
 
-.header-text{
-    padding: 80px 0;
-    color: #fff;
-    text-align: center;
+.about-right {
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 500px;
 }
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-}
-.about-me {
-    margin: 30px auto 20px auto;
-    width: 60%; /* Adjust width for better centering */
-}
-.tab-titles{
+
+/* 2. TABS */
+.tab-titles {
     display: flex;
     width: 100%;
     justify-content: center;
     margin-top: 12px;
 }
-.tab-links{
+
+.tab-links {
     margin-left: 25px;
     margin-right: 25px;
     font-size: 30px;
@@ -99,7 +36,8 @@ nav ol li{
     cursor: pointer;
     position: relative;
 }
-.tab-links::after{
+
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -110,118 +48,72 @@ nav ol li{
     transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+.tab-links.active-link::after {
     width: 50%;
+    box-shadow: 0 2px 5px rgba(255, 0, 79, 0.3);
 }
-.tab-contents ul li{
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* 3. TAB CONTENT */
+.tab-contents ul li {
     list-style: none;
     margin: 50px 0;
     font-size: 20px;
+    border-left: 2px solid rgba(255, 0, 79, 0.7);
+    padding-left: 15px;
+    transition: all 0.3s ease;
 }
-.tab-contents ul li span{
+
+.tab-contents ul li:hover {
+    border-left: 2px solid rgba(255, 0, 79, 0.9);
+    padding-left: 20px;
+}
+
+.tab-contents ul li span {
     color: #ee1157;
     font-size: 30px;
 }
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-.about-flex {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 0px; /* Moves the section down */
-}
-.about-left {
-    flex: 1 1 350px;
-    min-width: 300px;
-    max-width: 600px;
-}
-.about-right {
-    flex: 1 1 350px;
-    min-width: 300px;
-    max-width: 500px;
-}
-/* Mobile responsive styles - add to all your CSS files */
 
-/* For screens smaller than 768px (phones and small tablets) */
+/* 4. MEDIA QUERIES */
 @media (max-width: 768px) {
-  /* Header and navigation fixes */
-  #header {
-    height: auto;
-    min-height: 80px;
-  }
-  
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav ul {
-    margin: 8px 0;
-    text-align: center;
-    width: 100%;
-  }
-  
-  nav ul li {
-    margin: 5px 8px;
-  }
-  
-  nav ul li a {
-    font-size: 18px;
-  }
-  
-  /* Social icons sizing */
-  .social-icon {
-    width: 36px !important;
-    height: 36px !important;
-    padding: 4px;
-  }
-  
-  /* About section layout */
-  .about-flex {
-    flex-direction: column;
-    padding: 20px 5%;
-    margin-top: 20px;
-  }
-  
-  .about-left, .about-right {
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  /* Text scaling */
-  .sub-title {
-    font-size: 32px;
-    margin-bottom: 15px;
-  }
-  
-  .about-left p {
-    font-size: 16px !important;
-    margin: 10px 0 20px 0 !important;
-  }
-  
-  /* Tab titles */
-  .tab-titles {
-    justify-content: space-around;
-  }
-  
-  .tab-links {
-    margin: 0 5px;
-    font-size: 18px;
-  }
-  
-  /* List items in tabs */
-  .tab-contents ul li {
-    margin: 30px 0;
-    font-size: 16px;
-  }
-  
-  .tab-contents ul li span {
-    font-size: 20px;
-  }
+    .about-flex {
+        flex-direction: column;
+        padding: 20px 5%;
+        margin-top: 20px;
+    }
+    
+    .about-left, .about-right {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .tab-titles {
+        justify-content: space-around;
+    }
+    
+    .tab-links {
+        margin: 0 5px;
+        font-size: 18px;
+    }
+    
+    .tab-contents ul li {
+        margin: 30px 0;
+        font-size: 16px;
+    }
+    
+    .tab-contents ul li span {
+        font-size: 20px;
+    }
+    
+    .about-left p {
+        font-size: 16px !important;
+        margin: 10px 0 20px 0 !important;
+    }
 }

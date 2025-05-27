@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Brendan Lee</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,6 +36,7 @@
         </div>
     </div>
 </div>
+
 <script>
     const firstNameText = "Brendan";
     const lastNameText = "Lee";
@@ -75,13 +77,9 @@
     
     typeFirstName();
 
-    // Combined scroll event listener
     window.addEventListener('scroll', function() {
         const scrollTop = window.scrollY;
-        
-        // Use a single threshold of 10px for consistency
         if (scrollTop > 10) {
-            // Use classes to handle the hiding/showing
             typedNameDiv.classList.add('hide');
             typedSubDiv.classList.add('hide');
         } else {

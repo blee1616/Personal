@@ -1,95 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-/* Replace background in all CSS files (aboutMe.css, projects.css, experience.css) */
-body {
-  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0a0a0a 100%);
-  color: #fff;
-  min-height: 100vh;
-}
-
-#header {
-    width: 100%;
-    height: 20vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.container {
-    padding: 10px 10%;
-}
-
-.social-icon {
-    background-color: white;
-    padding: 4px;
-    border-radius: 40%;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    opacity: 1;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-nav ol li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 10px;
-}
-
+/* 1. PROJECT SECTION */
 .projects-section {
     padding: 20px 10%;
     min-height: 80vh;
 }
 
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
+/* 2. PROJECT CARDS */
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -103,11 +18,13 @@ nav ol li{
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 0, 79, 0.7);
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 0, 79, 0.3);
+    border: 2px solid rgba(255, 0, 79, 0.9);
 }
 
 .project-card img {
@@ -124,7 +41,6 @@ nav ol li{
 .project-info h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #fff;
 }
 
 .project-info p {
@@ -134,6 +50,7 @@ nav ol li{
     color: #ddd;
 }
 
+/* 3. PROJECT LINKS */
 .project-links {
     display: flex;
     gap: 15px;
@@ -175,19 +92,8 @@ nav ol li{
     margin-right: 5px;
     border: none;
 }
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 15px;
-}
 
-.tech-stack span {
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: 12px;
-  margin-bottom: 5px;
-}
+/* 4. TECH STACK */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -203,6 +109,7 @@ nav ol li{
     font-weight: 500;
 }
 
+/* 5. PROJECT FILTER */
 .project-filter {
     display: flex;
     justify-content: center;
@@ -231,87 +138,40 @@ nav ol li{
     background: rgba(255, 0, 79, 0.2);
     color: #fff;
     border: 1px solid #ff004f;
+    box-shadow: 0 0 10px rgba(255, 0, 79, 0.5);
 }
 
+/* 6. MEDIA QUERIES */
 @media (max-width: 768px) {
-  /* Header and navigation fixes */
-  #header {
-    height: auto;
-    min-height: 80px;
-  }
-  
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav ul {
-    margin: 8px 0;
-    text-align: center;
-    width: 100%;
-  }
-  
-  nav ul li {
-    margin: 5px 8px;
-  }
-  
-  nav ul li a {
-    font-size: 18px;
-  }
-  
-  /* Social icons sizing */
-  .social-icon {
-    width: 36px !important;
-    height: 36px !important;
-    padding: 4px;
-  }
-  
-  /* Projects section adjustments */
-  .projects-section {
-    padding: 20px 5%;
-  }
-  
-  .sub-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  /* Filter buttons */
-  .project-filter {
-    gap: 8px;
-    margin-bottom: 25px;
-  }
-  
-  .filter-btn {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
-  
-  /* Project cards */
-  .projects-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .project-card {
-    margin: 0;
-  }
-  
-  .project-info h2 {
-    font-size: 20px;
-  }
-  
-  .project-info p {
-    font-size: 14px;
-  }
-  
-  /* Tech stack tags */
-  .tech-stack {
-    gap: 5px;
-  }
-  
-  .tech-stack span {
-    font-size: 11px;
-    padding: 4px 8px;
-  }
+    .projects-section {
+        padding: 20px 5%;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .project-filter {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .project-info h2 {
+        font-size: 20px;
+    }
+    
+    .project-info p {
+        font-size: 14px;
+    }
+    
+    .tech-stack span {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
 }

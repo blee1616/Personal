@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Brendan Lee - Experience</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="experience.css">
 </head>
 <body>
@@ -116,6 +117,7 @@
                 </div>
             </div> 
         </div>
+
         <div class="education-section">
             <h2>Education</h2>
             <div class="education-item">
@@ -132,7 +134,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Timeline animation
             const timelineItems = document.querySelectorAll('.timeline-item');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -147,8 +148,6 @@
             timelineItems.forEach(item => {
                 observer.observe(item);
             });
-            
-            // Scroll progress indicator
             window.addEventListener('scroll', function() {
                 const scrollTop = window.scrollY;
                 const windowHeight = window.innerHeight;
@@ -156,8 +155,6 @@
                 const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
                 document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
             });
-            
-            // Expandable description paragraphs
             const descriptionParagraphs = document.querySelectorAll('.timeline-content p');
             descriptionParagraphs.forEach(paragraph => {
                 paragraph.addEventListener('click', function() {
