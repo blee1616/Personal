@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Brendan Lee - Experience</title>
     <link rel="stylesheet" href="experience.css">
 </head>
@@ -59,7 +59,7 @@
                     <p>Selected for research fellowship to develop data systems and ML models analyzing consumer behavior patterns and supernormal stimuli.</p>
                     <div class="skills-used">
                         <span>Python</span>
-                        <span>Websraping</span>
+                        <span>Web Craping</span>
                         <span>Data Analysis</span>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                 <p class="minor">Minor in Information and Data Sciences (IDS) and Business, Economics, and Management (BEM)</p>
                 <p class="date">Expected Graduation: 2027</p>
                 <p class="description">
-                    Relevant coursework: Data Structures and Algorithms, Software Design, Probability and Statistics, Statistical Inference, Intoduction to Computational Science and Engineering
+                    Relevant coursework: Data Structures and Algorithms, Software Design, Probability and Statistics, Statistical Inference, Introduction to Computational Science and Engineering
                 </p>
             </div>
         </div>
@@ -147,12 +147,23 @@
             });
         });
         document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('scroll', function() {
-                const scrollTop = window.scrollY;
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.body.clientHeight;
-                const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-                document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.body.clientHeight;
+            const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+            document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+            });
+        });
+        // Add to your existing DOMContentLoaded event listener
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle clicking on description paragraphs to expand them
+            const descriptionParagraphs = document.querySelectorAll('.timeline-content p');
+            
+            descriptionParagraphs.forEach(paragraph => {
+                paragraph.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                });
             });
         });
     </script>

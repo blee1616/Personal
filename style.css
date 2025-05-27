@@ -4,9 +4,11 @@
     font-family: 'Poppings', sans-serif;
     box-sizing: border-box;
 }
-body{
-    background: #080808 url(images/background.png) center center/cover no-repeat fixed;
-    color: #fff;
+body {
+  background: #080808 url(images/background.png) center center/cover no-repeat fixed;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
 }
 #header{
     width: 100%;
@@ -137,4 +139,109 @@ nav ol li{
     display: inline-block;
     list-style: none;
     margin: 10px 10px;
+}
+/* Mobile responsive styles - add to all your CSS files */
+
+/* For screens smaller than 768px (phones and small tablets) */
+@media (max-width: 768px) {
+  /* Fix navigation layout */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  nav ul li {
+    margin: 5px 10px;
+  }
+  
+  /* Adjust social icons */
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Adjust content sections */
+  .projects-section, .experience-section, .about-flex {
+    padding: 30px 5%;
+  }
+  
+  /* Fix about page layout */
+  .about-flex {
+    flex-direction: column;
+  }
+  
+  .about-left, .about-right {
+    width: 100%;
+  }
+  
+  /* Make project cards full width */
+  .project-card {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  /* Adjust timeline layout */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item::after {
+    left: 21px;
+  }
+  
+  /* Fix font sizes */
+  .sub-title {
+    font-size: 36px;
+  }
+  
+  p, .timeline-content p {
+    font-size: 16px;
+  }
+}
+
+/* For medium screens (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 10px 5%;
+  }
+  
+  /* Make two column layout for projects */
+  .project-card {
+    width: 48%;
+  }
+  
+  /* Adjust spacing */
+  .timeline-item {
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 768px) {
+  #typed-name {
+    font-size: 12vw;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #typed-subtext {
+    font-size: 4vw;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    max-width: 90%;
+  }
 }
