@@ -59,7 +59,7 @@
                     <p>Selected for research fellowship to develop data systems and ML models analyzing consumer behavior patterns and supernormal stimuli.</p>
                     <div class="skills-used">
                         <span>Python</span>
-                        <span>Web Craping</span>
+                        <span>Web Scraping</span>
                         <span>Data Analysis</span>
                     </div>
                 </div>
@@ -132,6 +132,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Timeline animation
             const timelineItems = document.querySelectorAll('.timeline-item');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -142,24 +143,22 @@
             }, {
                 threshold: 0.2
             });
+            
             timelineItems.forEach(item => {
                 observer.observe(item);
             });
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.body.clientHeight;
-            const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-            document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
-            });
-        });
-        // Add to your existing DOMContentLoaded event listener
-        document.addEventListener('DOMContentLoaded', function() {
-            // Handle clicking on description paragraphs to expand them
-            const descriptionParagraphs = document.querySelectorAll('.timeline-content p');
             
+            // Scroll progress indicator
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.body.clientHeight;
+                const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+                document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+            });
+            
+            // Expandable description paragraphs
+            const descriptionParagraphs = document.querySelectorAll('.timeline-content p');
             descriptionParagraphs.forEach(paragraph => {
                 paragraph.addEventListener('click', function() {
                     this.classList.toggle('expanded');
