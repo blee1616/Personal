@@ -5,10 +5,9 @@
     box-sizing: border-box;
 }
 body {
-  background: #080808 url(images/background.png) center center/cover no-repeat fixed;
-  background-size: cover;
-  background-position: center center;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0a0a0a 100%);
   color: #fff;
+  min-height: 100vh;
 }
 #header{
     width: 100%;
@@ -143,8 +142,9 @@ nav ol li{
 /* Mobile responsive styles - add to all your CSS files */
 
 /* For screens smaller than 768px (phones and small tablets) */
+/* Combined mobile media queries */
 @media (max-width: 768px) {
-  /* Fix navigation layout */
+  /* Navigation styling */
   nav {
     flex-direction: column;
     align-items: center;
@@ -160,18 +160,46 @@ nav ol li{
     margin: 5px 10px;
   }
   
-  /* Adjust social icons */
-  .social-icon {
-    width: 40px;
-    height: 40px;
+  nav ul li a {
+    font-size: 18px;
   }
   
-  /* Adjust content sections */
+  /* Typed name and subtext positioning */
+  #typed-name {
+    position: fixed;
+    font-size: 10vw;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  
+  #typed-subtext {
+    position: fixed;
+    top: 50%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4vw;
+    text-align: center;
+    max-width: 90%;
+    padding: 0 20px;
+  }
+  
+  /* Social icons */
+  .social-icon {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 4px;
+  }
+  
+  /* Content sections */
   .projects-section, .experience-section, .about-flex {
     padding: 30px 5%;
   }
   
-  /* Fix about page layout */
+  /* About page layout */
   .about-flex {
     flex-direction: column;
   }
@@ -180,13 +208,13 @@ nav ol li{
     width: 100%;
   }
   
-  /* Make project cards full width */
+  /* Project cards */
   .project-card {
     width: 100%;
     margin: 20px 0;
   }
   
-  /* Adjust timeline layout */
+  /* Timeline layout */
   .timeline::after {
     left: 31px;
   }
@@ -201,47 +229,12 @@ nav ol li{
     left: 21px;
   }
   
-  /* Fix font sizes */
+  /* Font sizes */
   .sub-title {
     font-size: 36px;
   }
   
   p, .timeline-content p {
     font-size: 16px;
-  }
-}
-
-/* For medium screens (tablets) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    padding: 10px 5%;
-  }
-  
-  /* Make two column layout for projects */
-  .project-card {
-    width: 48%;
-  }
-  
-  /* Adjust spacing */
-  .timeline-item {
-    padding: 10px 30px;
-  }
-}
-@media (max-width: 768px) {
-  #typed-name {
-    font-size: 12vw;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  #typed-subtext {
-    font-size: 4vw;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align: center;
-    max-width: 90%;
   }
 }

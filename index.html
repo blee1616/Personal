@@ -75,8 +75,13 @@
     
     typeFirstName();
 
+    // Combined scroll event listener
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 10) {
+        const scrollTop = window.scrollY;
+        
+        // Use a single threshold of 10px for consistency
+        if (scrollTop > 10) {
+            // Use classes to handle the hiding/showing
             typedNameDiv.classList.add('hide');
             typedSubDiv.classList.add('hide');
         } else {
