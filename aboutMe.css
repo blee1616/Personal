@@ -80,6 +80,33 @@
     color: #ee1157;
     font-size: 30px;
 }
+.resume-download {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #ff004f;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.3);
+}
+
+.download-btn:hover {
+    background: #d10042;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 0, 79, 0.5);
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
 
 /* 4. MEDIA QUERIES */
 @media (max-width: 768px) {
